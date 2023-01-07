@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Cssedit from "../components/editors/cssedit";
 import Htmledit from "../components/editors/htmledit";
 import Jsedit from "../components/editors/jsedit";
@@ -8,28 +8,24 @@ import Sidebar from "../components/sidebar";
 import { ClickContext } from "../contexts/clickContext";
 
 export default function Home() {
-  const {
-    isCss,
-    isHtml,
-    isJs,
-    setIsCss,
-    setIsHtml,
-    setIsJs,
-    html,
-    setHtml,
-    css,
-    setCss,
-    js,
-    setJs,
-  } = useContext(ClickContext);
+  const { isCss, isHtml, isJs, html, setHtml, css, setCss, js, setJs } =
+    useContext(ClickContext);
 
-  const srcDoc = `
-    <html>
-    <body>${html}</body>
-    <style>${css}</style>
-    <script>${js}</script>
-    </html>
-  `;
+  const [srcDoc, setSrcDoc] = useState(``);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+          <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+          </html>
+        `);
+    }, 300);
+    return () => clearTimeout(timeout);
+  }, [html, css, js]);
+
   return (
     <>
       <Head>
