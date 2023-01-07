@@ -12,7 +12,6 @@
 }
 
 body {
-  background: rgb(40, 42, 54);
   font-family: "Merriweather", serif;
 }
 
@@ -33,12 +32,14 @@ body {
 
 .full-editor {
   display: flex;
+  background: rgb(40, 42, 54);
 }
 
 .sidebar {
   flex: 2;
   width: 150px;
   height: calc(100vh - 60px);
+  background: rgb(40, 42, 54);
   /* border: 1px solid white; */
 }
 
@@ -51,4 +52,8 @@ body {
   flex: 2;
   height: calc(100vh - 60px);
   background: white;
+}
+
+.fullscreen {
+  height: 100vh;
 }
