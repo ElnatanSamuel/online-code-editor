@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ClickContext } from "../contexts/clickContext";
-import Index from "./index";
 
 function Sidebar() {
   const { html, setIsHtml, setIsCss, setIsJs } = useContext(ClickContext);
@@ -43,9 +42,6 @@ function Sidebar() {
       >
         Js
       </p>
-      <a href={Index} download="index.html">
-        Download
-      </a>
     </div>
   );
 }
