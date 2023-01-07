@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { ClickContext } from "../contexts/clickContext";
+import Index from "./index";
 
 function Sidebar() {
-  const { setIsHtml, setIsCss, setIsJs } = useContext(ClickContext);
+  const { html, setIsHtml, setIsCss, setIsJs } = useContext(ClickContext);
+  const htmlFile = JSON.stringify(html);
+  console.log(htmlFile);
   const handleHtmlClick = () => {
     setIsHtml(true);
     setIsCss(false);
@@ -40,9 +43,9 @@ function Sidebar() {
       >
         Js
       </p>
-      <p className="text-xs px-2 text-gray-500 pt-8">
-        More languages to come soon...
-      </p>
+      <a href={Index} download="index.html">
+        Download
+      </a>
     </div>
   );
 }
