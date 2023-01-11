@@ -64,9 +64,6 @@ export default function Home() {
             ) : null}
             {isCss == true ? <Cssedit value={css} onChange={setCss} /> : null}
             {isJs == true ? <Jsedit value={js} onChange={setJs} /> : null}
-
-            {/* <Cssedit  value={css} onChange={setCss} />
-            <Jsedit  value={js} onChange={setJs} /> */}
           </div>
           <div className="preview-sec">
             <iframe

@@ -3,7 +3,7 @@ import { ClickContext } from "../contexts/clickContext";
 
 function Fullscreen() {
   const { html, css, js } = useContext(ClickContext);
-  const srcDoc = `
+  const srcDocument = `
     <html>
     <body>${html}</body>
     <style>${css}</style>
@@ -13,7 +13,7 @@ function Fullscreen() {
   return (
     <div className="fullscreen">
       <iframe
-        srcDoc={srcDoc}
+        srcDoc={srcDocument}
         title="output"
         sandbox="allow-scripts"
         width="100%"

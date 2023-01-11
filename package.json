@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@axetroy/react-download": "^1.1.1",
     "@codemirror/lang-css": "^6.0.1",
     "@codemirror/lang-html": "^6.4.0",
     "@codemirror/lang-javascript": "^6.1.2",
     "@next/font": "13.1.1",
     "@uiw/codemirror-theme-dracula": "^4.19.5",
     "@uiw/react-codemirror": "^4.19.5",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

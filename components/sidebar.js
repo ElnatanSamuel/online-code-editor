@@ -2,9 +2,8 @@ import { useContext } from "react";
 import { ClickContext } from "../contexts/clickContext";
 
 function Sidebar() {
-  const { html, setIsHtml, setIsCss, setIsJs } = useContext(ClickContext);
-  const htmlFile = JSON.stringify(html);
-  console.log(htmlFile);
+  const { setIsHtml, setIsCss, setIsJs } = useContext(ClickContext);
+
   const handleHtmlClick = () => {
     setIsHtml(true);
     setIsCss(false);

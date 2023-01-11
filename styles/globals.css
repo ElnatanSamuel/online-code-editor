@@ -57,3 +57,16 @@ body {
 .fullscreen {
   height: 100vh;
 }
+
+.goto {
+  display: flex;
+  align-items: center;
+}
+
+.save-file {
+  padding: 8px 16px;
+  background: rgb(13, 13, 182);
+  color: white;
+  font-size: 12px;
+  margin: 0 10px;
+}
